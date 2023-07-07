@@ -21,7 +21,7 @@ tx_data = (
     f"{account.address[2:]}"
 )
 
-adapter_params_bytes = bytes.fromhex(tx_data[2:])  # Skip the '0x' prefix
+adapter_params_bytes = bytes.fromhex(tx_data[2:])  # Skip the '0x' prefix.
 for i in range(int(input("Количество транзакций: "))):
     value = contract.functions.estimateSendFee(
         167,
